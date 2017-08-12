@@ -73,14 +73,14 @@
         <stringProp name="shareMode">shareMode.all</stringProp>
       </CSVDataSet>
       <hashTree/>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1902725103">
+          <collectionProp name="-361909744">
             <stringProp name="49">1</stringProp>
             <stringProp name="51">3</stringProp>
-            <stringProp name="1629">30</stringProp>
+            <stringProp name="51">3</stringProp>
             <stringProp name="60">60</stringProp>
-            <stringProp name="1572">15</stringProp>
+            <stringProp name="10">10</stringProp>
           </collectionProp>
         </collectionProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
@@ -89,7 +89,31 @@
         </elementProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
       </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">2.5</stringProp>
+        <longProp name="ThreadGroup.start_time">1502548568000</longProp>
+        <longProp name="ThreadGroup.end_time">1502548568000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
       <hashTree>
+        <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput Timer" enabled="false">
+          <intProp name="calcMode">1</intProp>
+          <doubleProp>
+            <name>throughput</name>
+            <value>1.5</value>
+            <savedValue>0.0</savedValue>
+          </doubleProp>
+        </ConstantThroughputTimer>
+        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request Главная страница" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
@@ -106,7 +130,7 @@
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
           <boolProp name="HTTPSampler.image_parser">true</boolProp>
           <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re">loadtestweb\.wordpress\.com/.</stringProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
@@ -118,9 +142,9 @@
         </TestAction>
         <hashTree>
           <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
-            <stringProp name="TestPlan.comments">обеспечивает задержку между 3.5 и 5 секундами.</stringProp>
+            <stringProp name="TestPlan.comments">обеспечивает задержку между 1 и 5 секундами.</stringProp>
             <stringProp name="ConstantTimer.delay">3500</stringProp>
-            <stringProp name="RandomTimer.range">5000</stringProp>
+            <stringProp name="RandomTimer.range">4000</stringProp>
           </UniformRandomTimer>
           <hashTree/>
         </hashTree>
@@ -171,7 +195,7 @@
         </TestAction>
         <hashTree>
           <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
-            <stringProp name="TestPlan.comments">обеспечивает задержку между 3 и 5 секундами.</stringProp>
+            <stringProp name="TestPlan.comments">обеспечивает задержку между 1 и 5 секундами.</stringProp>
             <stringProp name="ConstantTimer.delay">3000</stringProp>
             <stringProp name="RandomTimer.range">5000</stringProp>
           </UniformRandomTimer>
@@ -204,7 +228,7 @@
         </TestAction>
         <hashTree>
           <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
-            <stringProp name="TestPlan.comments">обеспечивает задержку между 5 и 7 секундами.</stringProp>
+            <stringProp name="TestPlan.comments">обеспечивает задержку между 1 и 5 секундами.</stringProp>
             <stringProp name="ConstantTimer.delay">5000</stringProp>
             <stringProp name="RandomTimer.range">7000</stringProp>
           </UniformRandomTimer>
@@ -226,7 +250,7 @@
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
           <boolProp name="HTTPSampler.image_parser">true</boolProp>
           <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re">loadtestweb\.wordpress\.com/.</stringProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
@@ -274,7 +298,7 @@
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
           <boolProp name="HTTPSampler.image_parser">true</boolProp>
           <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re">loadtestweb\.wordpress\.com/.</stringProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
@@ -290,20 +314,21 @@
           </HtmlExtractor>
           <hashTree/>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Test Action" enabled="true">
-          <intProp name="ActionProcessor.action">1</intProp>
-          <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration"></stringProp>
-        </TestAction>
-        <hashTree>
-          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
-            <stringProp name="TestPlan.comments">обеспечивает задержку между 1 и 3.5 секундами.</stringProp>
-            <stringProp name="ConstantTimer.delay">1000</stringProp>
-            <stringProp name="RandomTimer.range">3500</stringProp>
-          </UniformRandomTimer>
-          <hashTree/>
-        </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request комментарий не авторизованным пользователем" enabled="true">
+          <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
+            <collectionProp name="HTTPFileArgs.files">
+              <elementProp name="C:\Users\Plus\Desktop\J Meter 3.0\login.txt" elementType="HTTPFileArg">
+                <stringProp name="File.path">C:\Users\Plus\Desktop\J Meter 3.0\login.txt</stringProp>
+                <stringProp name="File.paramname">${Email, name. sait}</stringProp>
+                <stringProp name="File.mimetype"></stringProp>
+              </elementProp>
+              <elementProp name="C:\Users\Plus\Desktop\J Meter 3.0\comments-1.txt" elementType="HTTPFileArg">
+                <stringProp name="File.path">C:\Users\Plus\Desktop\J Meter 3.0\comments-1.txt</stringProp>
+                <stringProp name="File.paramname">${CommentText}</stringProp>
+                <stringProp name="File.mimetype"></stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments">
               <elementProp name="highlander_comment_nonce" elementType="HTTPArgument">
@@ -315,25 +340,7 @@
               </elementProp>
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-              </elementProp>
-              <elementProp name="" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-              </elementProp>
-              <elementProp name="" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-              </elementProp>
-              <elementProp name="" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${}</stringProp>
+                <stringProp name="Argument.value"></stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
               </elementProp>
@@ -356,19 +363,6 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Test Action" enabled="true">
-          <intProp name="ActionProcessor.action">1</intProp>
-          <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration"></stringProp>
-        </TestAction>
-        <hashTree>
-          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
-            <stringProp name="TestPlan.comments">обеспечивает задержку между 1 и 3.5 секундами.</stringProp>
-            <stringProp name="ConstantTimer.delay">13000</stringProp>
-            <stringProp name="RandomTimer.range">15000</stringProp>
-          </UniformRandomTimer>
-          <hashTree/>
-        </hashTree>
         <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
           <boolProp name="displayJMeterProperties">false</boolProp>
           <boolProp name="displayJMeterVariables">true</boolProp>
@@ -448,21 +442,6 @@
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">1</stringProp>
-        </elementProp>
-        <stringProp name="ThreadGroup.num_threads">1</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">2</stringProp>
-        <longProp name="ThreadGroup.start_time">1502557512000</longProp>
-        <longProp name="ThreadGroup.end_time">1502557512000</longProp>
-        <boolProp name="ThreadGroup.scheduler">false</boolProp>
-        <stringProp name="ThreadGroup.duration"></stringProp>
-        <stringProp name="ThreadGroup.delay"></stringProp>
-      </ThreadGroup>
-      <hashTree/>
     </hashTree>
     <WorkBench guiclass="WorkBenchGui" testclass="WorkBench" testname="WorkBench" enabled="true">
       <boolProp name="WorkBench.save">true</boolProp>
