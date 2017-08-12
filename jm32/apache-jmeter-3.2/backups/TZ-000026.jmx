@@ -75,8 +75,8 @@
       <hashTree/>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1902725103">
-            <stringProp name="49">1</stringProp>
+          <collectionProp name="-1499197386">
+            <stringProp name="54">6</stringProp>
             <stringProp name="51">3</stringProp>
             <stringProp name="1629">30</stringProp>
             <stringProp name="60">60</stringProp>
@@ -304,40 +304,32 @@
           <hashTree/>
         </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request комментарий не авторизованным пользователем" enabled="true">
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-            <collectionProp name="Arguments.arguments">
-              <elementProp name="highlander_comment_nonce" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${highlander_comment_nonce}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                <stringProp name="Argument.name">highlander_comment_nonce</stringProp>
+          <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
+            <collectionProp name="HTTPFileArgs.files">
+              <elementProp name="C:\Users\Plus\Desktop\J Meter 3.0\comments-1.txt" elementType="HTTPFileArg">
+                <stringProp name="File.path">C:\Users\Plus\Desktop\J Meter 3.0\comments-1.txt</stringProp>
+                <stringProp name="File.paramname">${commentText}</stringProp>
+                <stringProp name="File.mimetype">&apos;commentText&apos;</stringProp>
               </elementProp>
-              <elementProp name="" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              <elementProp name="C:\Users\Plus\Desktop\J Meter 3.0\login.txt" elementType="HTTPFileArg">
+                <stringProp name="File.path">C:\Users\Plus\Desktop\J Meter 3.0\login.txt</stringProp>
+                <stringProp name="File.paramname">${name}</stringProp>
+                <stringProp name="File.mimetype">&apos;name&apos;</stringProp>
               </elementProp>
-              <elementProp name="" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              <elementProp name="C:\Users\Plus\Desktop\J Meter 3.0\login.txt" elementType="HTTPFileArg">
+                <stringProp name="File.path">C:\Users\Plus\Desktop\J Meter 3.0\login.txt</stringProp>
+                <stringProp name="File.paramname">${mail}</stringProp>
+                <stringProp name="File.mimetype">&apos;mail&apos;</stringProp>
               </elementProp>
-              <elementProp name="" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-              </elementProp>
-              <elementProp name="" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              <elementProp name="C:\Users\Plus\Desktop\J Meter 3.0\login.txt" elementType="HTTPFileArg">
+                <stringProp name="File.path">C:\Users\Plus\Desktop\J Meter 3.0\login.txt</stringProp>
+                <stringProp name="File.paramname">${sait}</stringProp>
+                <stringProp name="File.mimetype">&apos;sait&apos;</stringProp>
               </elementProp>
             </collectionProp>
+          </elementProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
           </elementProp>
           <stringProp name="HTTPSampler.domain"></stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
@@ -352,6 +344,7 @@
           <boolProp name="HTTPSampler.image_parser">true</boolProp>
           <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
@@ -412,6 +405,42 @@
         </ResultCollector>
         <hashTree/>
         <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="Simple Data Writer" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="GraphVisualizer" testclass="ResultCollector" testname="Graph Results" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
